@@ -26,7 +26,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "C:/Users/Usuario/Curso programacion/ArgProg/ProyectoIntegradorFairLucas/PIFairLucas/node_modules/bootstrap/dist/css/bootstrap.css"
+              "C:/Users/Usuario/Curso programacion/ArgProg/ProyectoIntegradorFairLucas/PIFairLucas/Frontend/node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
               "/node_modules/bootstrap/dist/js/bootstrap.js"
