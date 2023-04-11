@@ -10,42 +10,44 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
+export class LoginComponent implements OnInit {
+  isLogged=false;
+  isLogginFail=false;
+  loginUsuario!: LoginUsuario;
+  nombreUsuario!: string;
+  password! :string;
+  roles:string[]=[];
+  errMsj!:string;
 
-isLogged = false;
-isLogginFail = false;
-loginUsuario! : LoginUsuario;
-nombreUsuario! : string;
-password! : string;
-roles: string[]=[];
-errMsj!: string;
 
-constructor (private tokenService: TokenService, private authService: AuthService, private router: Router){ }
+  constructor(private tokenService: TokenService, private authService: AuthService,private router: Router){}
+  ngOnInit(): void {
 
-ngOnInit() {
-  if (this.tokenService.getToken()){
-    this.isLogged = true;
-    this.isLogginFail = false;
-    this.roles = this.tokenService.getAuthorities();
+    if(this.tokenService.getToken()){
+      this.isLogged=true;
+      this.isLogginFail=false;
+      this.roles=this.tokenService.getAuthorities();
+      
+    }
   }
-}
+  
 
-onLogin(): void{
-  this.loginUsuario = new LoginUsuario(this.nombreUsuario, this.password); 
-  this.authService.login(this.loginUsuario).subscribe(data =>{
-    this.isLogged = true;
-    this.isLogginFail = false;
-    this.tokenService.setToken(data.token);
-    this.tokenService.setUserName(data.nombreUsuario);
-    this.tokenService.setAuthorities(data.authorities);
-    this.roles = data.authorities;
-    this.router.navigate([''])
-  }, err =>{
-    this.isLogged = false;
-    this.isLogginFail = true;
-    this.errMsj = err.error.message;
-    console.log(this.errMsj);
-  })
-}
+  onLogin():void{
+    this.loginUsuario=new LoginUsuario(this.nombreUsuario,this.password);
+    this.authService.login(this.loginUsuario).subscribe(data =>{
+        this.isLogged=true;
+        this.isLogginFail=false;
+        this.tokenService.setToken(data.token);
+        this.tokenService.setUserName(data.nombreUsuario);
+        this.tokenService.setAuthorities(data.authorities);
+        this.roles=data.authorities;
+        window.location.reload();
+      },err =>{
+        this.isLogged=false;
+        this.isLogginFail=true;
+        this.errMsj=err.error.mensaje;
+        console.log(this.errMsj);
+      })
 
+  }
 }

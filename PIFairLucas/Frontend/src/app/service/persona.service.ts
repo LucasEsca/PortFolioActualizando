@@ -3,9 +3,6 @@ import { Injectable } from '@angular/core';
 import { persona } from '../model/persona.model';
 import { Observable } from 'rxjs';
 
-const TOKEN_KEY = 'AuthToken';
-const USERNAME_KEY = 'AuthUsername';
-const AUTHORITIES_KEY = 'AuthAuthorities';
 @Injectable({
   providedIn: 'root'
 })
