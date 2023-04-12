@@ -17,31 +17,23 @@ export class EditExperienciaComponent implements OnInit {
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.detail(id).subscribe(
-      {
-      next:data =>{
+      data =>{
         this.expLab = data;
-      }, error:_err =>{
+      },err =>{
         alert("Error al modificar experiencia");
         this.router.navigate(['']);
-      }
-    }
-      
-  );
+      });
 }
 
   onUpdate(): void {
     const id = this.activatedRouter.snapshot.params['id'];
     this.sExperiencia.update(id, this.expLab).subscribe(
-      {
-        next:_data => {
+        data => {
           this.router.navigate(['']);
-    }, error:_err =>{
+    }, err =>{
       alert("Error al modificar experiencia");
       this.router.navigate(['']);
-   }
-
-      }
-  );
+   });
 }
 
 }

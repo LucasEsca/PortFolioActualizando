@@ -36,8 +36,7 @@ export class ExperienciaComponent {
           this.cargarExperiencia();
         }, err => {
           alert("No se pudo borrar la experiencia");
-        }
-      )
+        })
+      }
     }
-  }
   }
