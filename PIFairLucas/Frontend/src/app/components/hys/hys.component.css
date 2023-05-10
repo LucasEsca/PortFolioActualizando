@@ -1,4 +1,19 @@
 .row{
-    background-color: #a1b5cb;
+   
     padding: 20px;
 }
+
+.circulo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-circle.btn-lg {
+    width: 50px;
+    height: 50px;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.33;
+    border-radius: 25px;
+  }

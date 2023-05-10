@@ -10,12 +10,11 @@
     width: 150px; 
 }
 img{
-    width: 50px;
+    width: 30px;
     
 }
-.btn{
-    border-width: medium;
-}
+
+
 /*--- Para la vista de celular---*/
 @media (max-width: 575px) {
 .container{

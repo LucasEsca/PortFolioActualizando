@@ -1,0 +1,16 @@
+{
+  "hosting": {
+    "public": "dist/pifair-lucas",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}

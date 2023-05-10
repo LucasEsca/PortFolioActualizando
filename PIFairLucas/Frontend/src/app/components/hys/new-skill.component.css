@@ -1,0 +1,7 @@
+.background{
+    background-image: url("/assets/hys.svg");
+    background-size: cover;
+}
+.card{
+    opacity: 0.8;
+}

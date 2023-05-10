@@ -1,0 +1,12 @@
+#fotoprueba{
+    position: absolute;
+        width: 30%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 6px gray;
+}
+.background{
+    background-image: url("/assets/pers.svg");
+}
+.card{
+    opacity: 0.8;
+}

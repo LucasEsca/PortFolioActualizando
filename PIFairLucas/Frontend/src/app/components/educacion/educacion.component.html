@@ -1,31 +1,40 @@
-<div class="row">
+<div class="row" >
     <h1>Educacion</h1>
     <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/nuevaedu" *ngIf="isLogged">
-            Agregar Educacion
+        <button type="button" class="btn btn-default btn-circle btn-lg" style="background-color: #2fac2b;" routerLink="/nuevaedu" *ngIf="isLogged">
+            <i class="bi bi-folder-plus"></i>
         </button>
     </div>
 
-    <div class="col lg 1"></div>
     <div class="col-lg-11">
-        <table class="table">
-            <tbody>
-                <tr *ngFor="let Educacion of educacion">
-                    <td>
-                        <h2>{{Educacion.nombreE}}</h2>
-                    </td>
-                    <td>{{Educacion.descripcionE}}</td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editedu/{{Educacion.id}}">
-                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
-                    </td>
-                    <td *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="delete(Educacion.id)">
-                            <i class="bi bi-trash-fill"></i> BORRAR</button>
-                    </td>
+        <tbody>
+            <tr *ngFor="let Educacion of educacion">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapsee" aria-expanded="false" aria-controls="collapseOne">
+                            <td>
+                                <h2>{{Educacion.nombreE}}</h2>
+                             </td>
+                        </button>
+                      </h2>
+                      <div id="collapsee" class="accordion-collapse collapse " data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <td><p>{{Educacion.descripcionE}}</p></td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-default btn-circle btn-lg" style="background-color:#2fac2b;"  routerLink="/editedu/{{Educacion.id}}">
+                                <i class="bi bi-pencil-fill"></i> </button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-default btn-circle btn-lg" style="background-color: #ac2b2b;" (click)="delete(Educacion.id)">
+                                <i class="bi bi-trash-fill"></i> </button>
+                        </td>
+                        </div>
+                      </div>
+                    </div>
+                </div>
                 </tr>
-            </tbody>
-        </table>
-    </div>
-
+                </tbody>
+        </div>
 </div>
+

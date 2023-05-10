@@ -1,12 +1,71 @@
 <div class="row">
-    <h1>Proyectos Realizados</h1>
-    <div class="contenedor">
-        <div class="col-sm-12 col-md-7 col-jg-7 parte1">
-            <h3>Encriptador</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore enim, facere accusamus at voluptatem sint, quibusdam maxime nobis hic odio nemo dolorum dicta quasi ipsum distinctio beatae exercitationem optio laboriosam?</p>
+    <h1>Proyectos Realizados/En Progreso</h1>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item ">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <h3>FronEnd de este Proyecto</h3>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>El Front del proyecto</strong> Decidi incluir el repositorio Git del front, debido a que por el momento no cuento con proyectos para mostrar
+              <a href="https://github.com/LucasEsca/Portfolio-FrontEnd" role="button"><img src="/assets/fron.svg" class="img-fluid img-proyecto " ></a> 
+            </div>
+          </div>
         </div>
-        <div class="col-sm-12 col-md-3 col-lg-3 offset-md-1 offset-lg-1 parte2">
-            <img src="../../../assets/FairLucasDiagrama.drawio (1).png" class="img-fluid img-proyecto">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <h3>BackEnd de este Proyecto</h3>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>El Back del proyecto</strong>Decidi incluir el repositorio Git del back, debido a que por el momento no cuento con proyectos para mostrar
+              <a href="https://github.com/LucasEsca/Portfolio-BackEnd" role="button"><img src="/assets/back.svg" class="img-fluid img-proyecto" ></a>
+            </div>
+          </div>
         </div>
-    </div>
+
+
+
+
+      <h1>Practicas</h1>
+
+      <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <a href="https://github.com/LucasEsca/Cont.-Punt.-p--Cartas"><img src="/assets/cont.svg" class="rounded mx-auto d-block img-fluid img-proyecto" alt="..."></a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="text-decoration-underline fw-bold text-dark">Contador personalizable para truco</h5>
+              <p class="text-dark">Practica que incluye HTML, CSS y JS, contador el cual incluye 2 lados, reset y se le puede personalizar, la imagen para el conteo</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <a href="https://github.com/LucasEsca/Tic-Tac-Toe-practica"><img src="/assets/tic-tac.svg" class="rounded mx-auto d-block img-fluid img-proyecto" alt="..."></a>
+            <div class="carousel-caption d-none d-md-block">
+            <h5 class="text-decoration-underline fw-bold text-dark">Tic Tac Toe personalizable</h5>
+            <p class="text-dark">Practica que incluye HTML, CSS y JS, indica ganador y empate, se le puede personalizar para cambiar la X y/o el O</p>
+          </div>
+          </div>
+          <div class="carousel-item">
+            <a href="https://github.com/LucasEsca/Reloj-alternativo"><img src="/assets/reloj.svg" class="rounded mx-auto d-block img-fluid img-proyecto" alt="..."></a>
+            <div class="carousel-caption d-none d-md-block">
+              <h5 class="text-decoration-underline fw-bold">Reloj alternativo</h5>
+              <p>Practica que incluye HTML, CSS y JS, reloj a tiempo real en el cual no se utiliza, fuentes de relojes o numeros</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
 </div>
+
+

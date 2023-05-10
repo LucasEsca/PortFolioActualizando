@@ -1,31 +1,61 @@
 <div class="row">
     <h1>Experiencia laboral</h1>
     <div class="col-lg-2">
-        <button type="button" class="btn btn-dark" routerLink="/nuevaexp" *ngIf="isLogged">
-            Nueva Experiencia
+        <button type="button" class="btn btn-default btn-circle btn-lg" style="background-color: #2fac2b;" data-mdb-ripple-color="dark" routerLink="/nuevaexp" *ngIf="isLogged">
+            <i class="bi bi-folder-plus"></i>
         </button>
     </div>
-
-    <div class="col lg 1"></div>
+    
     <div class="col-lg-11">
-        <table class="table">
-            <tbody>
-                <tr *ngFor="let Experiencia of expe">
-                    <td>
+    <tbody>
+        <tr *ngFor="let Experiencia of expe">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse" aria-expanded="false" aria-controls="collapseOne">
+                        <td>
+                            <h2>{{Experiencia.nombreE}}</h2>
+                         </td>
+                    </button>
+                  </h2>
+                  <div id="collapse" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <td><p>{{Experiencia.descripcionE}}</p></td>
+                        <td *ngIf="isLogged">
+                            <button type="button" class="btn btn-default btn-circle btn-lg" style="background-color:#2fac2b;"  routerLink="/editexp/{{Experiencia.id}}">
+                                <i class="bi bi-pencil-fill"></i></button>
+                        </td>
+                        <td *ngIf="isLogged">
+                            <button class="btn btn-default btn-circle btn-lg" style="background-color: #ac2b2b;" (click)="delete(Experiencia.id)">
+                                <i class="bi bi-trash-fill"></i></button>
+                        </td> 
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </tr>
+            </tbody>
+        
+        </div>
+    
+   <!-- <div class="col-lg-11">
+
+                 <tbody>
+                    <tr *ngFor="let Experiencia of expe">
+                     <td>
                         <h2>{{Experiencia.nombreE}}</h2>
-                    </td>
-                    <td>{{Experiencia.descripcionE}}</td>
+                     </td>
+                    <td><p>{{Experiencia.descripcionE}}</p></td>
                     <td *ngIf="isLogged">
-                        <button class="btn btn-light" routerLink="/editexp/{{Experiencia.id}}">
-                            <i class="bi bi-pencil-fill"></i> EDITAR</button>
+                        <button type="button" class="btn btn-default btn-circle btn-lg" style="background-color:#2fac2b;"  routerLink="/editexp/{{Experiencia.id}}">
+                            <i class="bi bi-pencil-fill"></i></button>
                     </td>
                     <td *ngIf="isLogged">
-                        <button class="btn btn-danger" (click)="delete(Experiencia.id)">
-                            <i class="bi bi-trash-fill"></i> BORRAR</button>
+                        <button class="btn btn-default btn-circle btn-lg" style="background-color: #ac2b2b;" (click)="delete(Experiencia.id)">
+                            <i class="bi bi-trash-fill"></i></button>
                     </td>
                 </tr>
             </tbody>
-        </table>
-    </div>
 
-</div>
+    </div>-->
+    
