@@ -30,6 +30,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage, } from '@angular/fire/storage';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 
 
@@ -54,6 +55,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     EditSkillComponent,
     NewSkillComponent,
     EditAcercaDeComponent,
+    InicioComponent,
     
     
     

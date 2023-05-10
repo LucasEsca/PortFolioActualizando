@@ -1,0 +1,26 @@
+.container-fluid{
+    background-image: url("/assets/Lynx.svg");
+    background-size: cover;
+}
+
+.header{
+    margin-top: 2%;
+    text-align: center;
+}
+.body{
+    margin-top: 2%;
+}
+
+h1, h3, p {
+    color: antiquewhite;
+}
+
+.footer{
+    color: #fefefe;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 2px -2px 5px #999;
+    margin-top: 2%;
+}

@@ -9,9 +9,11 @@ import { EditeducacionComponent } from './components/educacion/editeducacion.com
 import { NewSkillComponent } from './components/hys/new-skill.component';
 import { EditSkillComponent } from './components/hys/edit-skill.component';
 import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
+import { InicioComponent } from './components/inicio/inicio.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path:'', component: InicioComponent},
+  {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   { path: 'nuevaexp', component: NewExperienciaComponent},
   { path: 'editexp/:id', component: EditExperienciaComponent},
