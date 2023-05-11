@@ -10,9 +10,11 @@ import { NewSkillComponent } from './components/hys/new-skill.component';
 import { EditSkillComponent } from './components/hys/edit-skill.component';
 import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { RegistroComponent } from './components/registro/registro.component';
 
 const routes: Routes = [
   {path:'', component: InicioComponent},
+  {path:'registro', component: RegistroComponent},
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   { path: 'nuevaexp', component: NewExperienciaComponent},

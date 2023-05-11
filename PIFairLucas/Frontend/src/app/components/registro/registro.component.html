@@ -1,0 +1,53 @@
+<div class="background font">
+    <section class="vh-100">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-right align-items-right h-100">
+          <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+              <div class="card-body p-5 text-center">
+    
+                <h3 class="mb-5">SingUp </h3>
+                <p class="mb-5">Ingrese sus datos</p>
+    
+    <!--ERROR EN EL ORDEN, SOLUCION MOMENTANEA PARA GUARDAR DATOS DE MANERA CORRECTA-->
+                <form #f="ngForm" (ngSubmit)="onSingUp()" novalidate> 
+                        
+                <div class="form-outline form-white mb-2">
+                 <input type="text"  name="nombre" class="form-control form-control-lg"
+                        [(ngModel)]="email" required />
+                    <label class="form-label" for="nombreCompleto">Nombre Completo</label>
+                </div>
+
+                  <div class="form-outline form-white mb-2">
+                  <input type="email"  name="nombreUsuario" class="form-control form-control-lg"
+                      [(ngModel)]="nombre" required />
+                    <label class="form-label" for="nombreUsuario">Usuario</label>
+                  </div>
+
+                  <div class="form-outline form-white mb-2">
+                  <input type="email"  name="eMail" class="form-control form-control-lg"
+                      [(ngModel)]="password" required />
+                    <label class="form-label" for="eMail">Email</label>
+                  </div>
+    
+                  <div class="form-outline form-white mb-1">
+                   <input type="password"  name="password" class="form-control form-control-lg"
+                      [(ngModel)]="nombreUsuario" required />
+                    <label class="form-label" for="password">Password</label>
+                  </div>
+      
+                  <button class="btn btn-light" data-mdb-ripple-color="dark" type="submit">SingUp</button>
+                  
+                </form>
+    
+                
+    
+                <hr class="my-4">
+    
+    
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    </div>
+    

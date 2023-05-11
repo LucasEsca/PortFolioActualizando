@@ -13,9 +13,9 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
   isLogged=false;
   isLogginFail=false;
-  loginUsuario!: LoginUsuario;
-  nombreUsuario!: string;
-  password! :string;
+  loginUsuario: LoginUsuario;
+  nombreUsuario: string;
+  password :string;
   roles:string[]=[];
   errMsj!:string;
 
@@ -38,7 +38,7 @@ export class LoginComponent implements OnInit {
         this.tokenService.setUserName(data.nombreUsuario);
         this.tokenService.setAuthorities(data.authorities);
         this.roles = data.authorities;
-        this.router.navigate([''])
+        this.router.navigate(['home'])
       }, err =>{
         this.isLogged = false;
         this.isLogginFail = true;

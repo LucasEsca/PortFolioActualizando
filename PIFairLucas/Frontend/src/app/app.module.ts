@@ -31,6 +31,7 @@ import { environment } from '../environments/environment';
 import { provideStorage,getStorage, } from '@angular/fire/storage';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { RegistroComponent } from './components/registro/registro.component';
 
 
 
@@ -56,6 +57,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
     NewSkillComponent,
     EditAcercaDeComponent,
     InicioComponent,
+    RegistroComponent,
     
     
     

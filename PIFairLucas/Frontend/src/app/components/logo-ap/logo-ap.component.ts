@@ -30,4 +30,12 @@ export class LogoAPComponent implements OnInit {
   login(){
     this.router.navigate(['/login'])
   }
+
+  registro(){
+    this.router.navigate(['/registro'])
+  }
+
+  inicio(){
+    this.router.navigate([''])
+  }
 }
