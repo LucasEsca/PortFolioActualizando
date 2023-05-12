@@ -11,6 +11,8 @@ import { EditSkillComponent } from './components/hys/edit-skill.component';
 import { EditAcercaDeComponent } from './components/acerca-de/edit-acerca-de.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { RegistroComponent } from './components/registro/registro.component';
+import { EditproyectoComponent } from './components/proyecto/editproyecto.component';
+import { NewproyectoComponent } from './components/proyecto/newproyecto.component';
 
 const routes: Routes = [
   {path:'', component: InicioComponent},
@@ -24,6 +26,8 @@ const routes: Routes = [
   { path: 'newskill', component: NewSkillComponent},
   { path: 'editskill/:id', component: EditSkillComponent},
   { path: 'editacercade/:id', component: EditAcercaDeComponent },
+  {path: 'editproyect/:id', component: EditproyectoComponent},
+  {path: 'newproyect', component: NewproyectoComponent}
 
 ];
 

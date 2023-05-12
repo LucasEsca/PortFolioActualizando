@@ -32,6 +32,8 @@ import { provideStorage,getStorage, } from '@angular/fire/storage';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { RegistroComponent } from './components/registro/registro.component';
+import { NewproyectoComponent } from './components/proyecto/newproyecto.component';
+import { EditproyectoComponent } from './components/proyecto/editproyecto.component';
 
 
 
@@ -58,6 +60,8 @@ import { RegistroComponent } from './components/registro/registro.component';
     EditAcercaDeComponent,
     InicioComponent,
     RegistroComponent,
+    NewproyectoComponent,
+    EditproyectoComponent,
     
     
     

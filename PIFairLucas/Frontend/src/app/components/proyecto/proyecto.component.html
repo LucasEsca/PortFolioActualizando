@@ -1,9 +1,14 @@
 <div class="row">
+
+
+
+
+  
     <h1>Proyectos Realizados/En Progreso</h1>
     <div class="accordion" id="accordionExample">
         <div class="accordion-item ">
           <h2 class="accordion-header">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                 <h3>FronEnd de este Proyecto</h3>
             </button>
           </h2>
@@ -69,3 +74,34 @@
 </div>
 
 
+<h1>Proyectos Realizados/En Progreso</h1>
+<tr *ngFor="let Proyecto of proyect">
+<div class="accordion" id="accordionExample">
+    <div class="accordion-item ">
+      <h2 class="accordion-header">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+            <td>
+              <h3>{{Proyecto.nombreP}}</h3>
+            </td>
+          
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          <td>
+            <p>{{Proyecto.descripcionP}}</p>
+          </td>
+          <a href="https://github.com/LucasEsca/Portfolio-FrontEnd" role="button"><img src={{Proyecto.img}} class="img-fluid img-proyecto " ></a> 
+          <td *ngIf="isLogged">
+            <button type="button" class="btn btn-default btn-circle btn-lg" style="background-color:#2fac2b;"  routerLink="/proyect/{{Proyecto.id}}">
+                <i class="bi bi-pencil-fill"></i></button>
+        </td>
+        <td *ngIf="isLogged">
+            <button class="btn btn-default btn-circle btn-lg" style="background-color: #ac2b2b;" (click)="delete(Proyecto.id)">
+                <i class="bi bi-trash-fill"></i></button>
+        </td> 
+        </div>
+      </div>
+    </div>
+    </div>
+  </tr>

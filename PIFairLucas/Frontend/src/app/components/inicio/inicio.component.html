@@ -16,16 +16,16 @@
         Puede realizar alguna de las siguientes acciones disponibles:
     </h3>
     <div class="list-group opacity-25 d-inline-flex p-2">
-        <button type="button" class="list-group-item list-group-item-action" (click)="login()" *ngIf="!isLogged" style="margin: 10px">Login
+        <button type="button" class="list-group-item list-group-item-action" (click)="login()" *ngIf="!isLogged">Login
             <p class="text-black">Puede logearse para realizar acciones adicionales.</p>
         </button>
-        <button type="button" class="list-group-item list-group-item-action" (click)="registro()" *ngIf="!isLogged" style="margin: 10px">Register
+        <button type="button" class="list-group-item list-group-item-action" (click)="registro()" *ngIf="!isLogged" >Register
             <p class="text-black">Registrarse si no posee una cuenta.</p>
         </button>
-        <button type="button" class="list-group-item list-group-item-action" (click)="home()" style="margin: 10px">Home
+        <button type="button" class="list-group-item list-group-item-action" (click)="home()" >Home
             <p class="text-black">Ir directamente a la pagina principal, donde se encuentra el Portfolio,</p>
         </button>
-        <button type="button" class="list-group-item list-group-item-action" style="margin: 10px">CV
+        <button type="button" class="list-group-item list-group-item-action" >CV
             <p class="text-black">Descargar mi CV</p>
         </button>
       </div>
@@ -33,21 +33,18 @@
       <h3> Mis Redes:</h3>
       <div class="redes">
         <a href="https://www.linkedin.com/in/lucas-fair-40779026a/"
-        class="btn text-white  btn-floating" style="background-color: #2b43ac;" role="button">
+        class="btn text-white  btn-floating" style="background-color: #2b43ac; margin: 10px" role="button" >
         <i class="bi bi-linkedin" ></i></a>
         <!-- <a href=""><img src="../../../assets/twitter.png" id="twitter"></a>-->
         <a href="https://www.instagram.com/fairlucas/"
-        class="btn text-white  btn-floating" style="background-color: #a305b8;"  role="button">
+        class="btn text-white  btn-floating" style="background-color: #a305b8; margin: 10px"  role="button">
             <i class="bi bi-instagram"></i></a>
         <a href="https://github.com/LucasEsca?tab=overview&from=2023-02-01&to=2023-02-28"
-         class="btn text-white  btn-floating" style="background-color: #000000;"  role="button">
+         class="btn text-white  btn-floating" style="background-color: #000000; margin: 10px"  role="button">
             <i class="bi bi-github"></i></a>
         <!-- <a href=""><img src="../../../assets/facebook.png" id="facebook"></a>-->
 </div>
 </div>
-<div class="footer position-absolute bottom-0 end-0">
-    <p>Fair Lucas <img src = "assets/lif1.svg" alt="Logo SVG" width="15px"/> | © Argentina Programa</p>
-    <p>Santa Fe, Argentina</p>
 </div>
-</div>
+<app-footer></app-footer>
 </div>

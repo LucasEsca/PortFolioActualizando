@@ -5,7 +5,7 @@
 package com.Portfolio.fli.Service;
 
 import com.Portfolio.fli.Entity.Experiencia;
-import com.Portfolio.fli.Interface.RExperiencia;
+import com.Portfolio.fli.Repository.RExperiencia;
 import jakarta.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
