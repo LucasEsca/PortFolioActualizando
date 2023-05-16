@@ -8,19 +8,24 @@
     
                   <form (ngSubmit)="onUpdate()" novalidate #f="ngForm">
                     <div class="form-group">
-                        <label for="nombre">Nombre</label>
+                        <label for="nombre">Nombre del proyecto</label>
                         <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="proyect.nombreP" required>
                     </div>
                     <br>
 
                     <div class="form-group">
-                        <label for="descripcion">Descripcion</label>
+                        <label for="descripcion">Descripcion del proyecto</label>
                         <input type="text" class="form-control" id="descripcion" name="descripcion" [(ngModel)]="proyect.descripcionP" required>
                     </div>
                     <br>
                     <div class="form-group">
-                        <label for="apellido">Apellido</label>
-                        <input type="file" class="form-control" id="img" name="img" [(ngModel)]="proyect.img" (change)="uploadImage($event)"
+                      <label for="descripcion">Url del proyecto</label>
+                      <input type="text" class="form-control" id="url" name="url" [(ngModel)]="proyect.urlP" required>
+                  </div>
+                    <br>
+                    <div class="form-group">
+                        <label for="apellido">imagen del proyecto</label>
+                        <input type="file" class="form-control" id="img" name="img" [(ngModel)]="proyect.imgP" (change)="uploadImage($event)"
                         accept=".jpg, .jpeg, .png">
                     </div>
                     <br>

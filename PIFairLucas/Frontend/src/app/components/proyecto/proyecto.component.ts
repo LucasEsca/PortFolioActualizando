@@ -9,7 +9,7 @@ import { TokenService } from 'src/app/service/token.service';
   styleUrls: ['./proyecto.component.css']
 })
 export class ProyectoComponent {
-  proyect: Proyecto [] = [];
+  proyect : Proyecto [] = [];
 
   constructor(private sProyecto: ProyectoService, private tokenService: TokenService) { }
 

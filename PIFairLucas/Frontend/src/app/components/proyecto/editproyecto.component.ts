@@ -35,7 +35,7 @@ export class EditproyectoComponent {
       alert("Error al modificar proyecto");
       this.router.navigate(['home']);
    });
-   this.proyect.img = this.imageService.url
+   this.proyect.imgP = this.imageService.url
    this.sProyecto.update(id, this.proyect).subscribe(
      data => {
        this.router.navigate(['home']);

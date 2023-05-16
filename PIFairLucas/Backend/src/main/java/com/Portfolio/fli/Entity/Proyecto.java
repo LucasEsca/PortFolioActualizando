@@ -16,16 +16,17 @@ public class Proyecto {
     private int id;
     private String nombreP;
     private String descripcionP;
-    private String img;
+    private String imgP;
+    private String urlP;
+    
+    public Proyecto() {
+}
 
-    public Proyecto(String nombreE, String descripcionE, String img) {
-        this.nombreP = nombreE;
-        this.descripcionP = descripcionE;
-        this.img = img;
-    }
-
-    public Proyecto(String nombreP, String descripcionP) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    public Proyecto(String nombreP, String descripcionP, String imgP, String urlP) {
+        this.nombreP = nombreP;
+        this.descripcionP = descripcionP;
+        this.imgP = imgP;
+        this.urlP = urlP;
     }
 
     public int getId() {
@@ -52,13 +53,24 @@ public class Proyecto {
         this.descripcionP = descripcionP;
     }
 
-    public String getImg() {
-        return img;
+    public String getImgP() {
+        return imgP;
     }
 
-    public void setImg(String img) {
-        this.img = img;
+    public void setImgP(String imgP) {
+        this.imgP = imgP;
     }
+
+    public String getUrlP() {
+        return urlP;
+    }
+
+    public void setUrlP(String urlP) {
+        this.urlP = urlP;
+    }
+
+
+
     
     
 }

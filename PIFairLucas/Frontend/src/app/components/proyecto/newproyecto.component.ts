@@ -13,7 +13,8 @@ export class NewproyectoComponent {
 
   nombreP : string = '';
   descripcionP : string = '';
-  img : string = '';
+  imgP : string = '';
+  urlP : string = '';
 
   constructor(private sProyecto: ProyectoService, private router: Router, private activatedRouter: ActivatedRoute, public imageService : ImageService) { }
 
@@ -21,7 +22,7 @@ export class NewproyectoComponent {
   }
 
   onCreate(): void {
-    const proy = new Proyecto(this.nombreP, this.descripcionP, this.img);
+    const proy = new Proyecto(this.nombreP, this.descripcionP, this.imgP, this.urlP);
     this.sProyecto.save(proy).subscribe(
       data => {
         alert("Proyecto añadida");

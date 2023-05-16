@@ -61,7 +61,8 @@ public class CProyecto {
         if(sProyecto.existsByNombreP(dtoproyecto.getNombreP()))
             return new ResponseEntity(new Mensaje("Esa experiencia existe"), HttpStatus.BAD_REQUEST);
         
-        Proyecto proyecto = new Proyecto(dtoproyecto.getNombreP(), dtoproyecto.getDescripcionP());
+        Proyecto proyecto = new Proyecto(dtoproyecto.getNombreP(), 
+                dtoproyecto.getDescripcionP(), dtoproyecto.getImgP(), dtoproyecto.getUrlP());
         sProyecto.save(proyecto);
         
         return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
@@ -73,7 +74,8 @@ public class CProyecto {
         if(!sProyecto.existsById(id))
             return new ResponseEntity(new Mensaje("El ID no existe"), HttpStatus.BAD_REQUEST);
         //Compara nombre de experiencias
-        if(sProyecto.existsByNombreP(dtoproyecto.getNombreP()) && sProyecto.getByNombreP(dtoproyecto.getNombreP()).get().getId() != id)
+        if(sProyecto.existsByNombreP(dtoproyecto.getNombreP()) && sProyecto.getByNombreP(
+                dtoproyecto.getNombreP()).get().getId() != id)
             return new ResponseEntity(new Mensaje("Esa experiencia ya existe"), HttpStatus.BAD_REQUEST);
         //No puede estar vacio
         if(StringUtils.isBlank(dtoproyecto.getNombreP()))
@@ -82,7 +84,8 @@ public class CProyecto {
         Proyecto proyecto = sProyecto.getOne(id).get();
         proyecto.setNombreP(dtoproyecto.getNombreP());
         proyecto.setDescripcionP((dtoproyecto.getDescripcionP()));
-        proyecto.setImg(dtoproyecto.getImg());
+        proyecto.setImgP(dtoproyecto.getImgP());
+        proyecto.setUrlP(dtoproyecto.getUrlP());
         
         sProyecto.save(proyecto);
         return new ResponseEntity(new Mensaje("Proyecto actualizada"), HttpStatus.OK);

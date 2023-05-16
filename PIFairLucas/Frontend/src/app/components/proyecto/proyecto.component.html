@@ -1,40 +1,42 @@
 <div class="row">
-
-
-
-
-  
-    <h1>Proyectos Realizados/En Progreso</h1>
-    <div class="accordion" id="accordionExample">
-        <div class="accordion-item ">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                <h3>FronEnd de este Proyecto</h3>
-            </button>
-          </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>El Front del proyecto</strong> Decidi incluir el repositorio Git del front, debido a que por el momento no cuento con proyectos para mostrar
-              <a href="https://github.com/LucasEsca/Portfolio-FrontEnd" role="button"><img src="/assets/fron.svg" class="img-fluid img-proyecto " ></a> 
-            </div>
+  <h1>Proyectos Realizados/En Progreso<button type="button" class="btn btn-default btn-circle btn-lg" style="background-color: #2fac2b;" 
+    data-mdb-ripple-color="dark" routerLink="/newproyect" *ngIf="isLogged">
+    <i class="bi bi-folder-plus"></i>
+</button></h1>
+  <tbody>
+  <tr *ngFor="let Proyecto of proyect">
+  <div class="accordion" id="accordionExample">
+      <div class="accordion-item ">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" 
+          aria-expanded="false" aria-controls="collapseOne">
+              <td>
+                <h3>{{Proyecto.nombreP}}</h3>
+              </td>
+            
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div class="accordion-body">
+            <td>
+              <p>{{Proyecto.descripcionP}}</p>
+            </td>
+            <a href={{Proyecto.urlP}} role="button"><img src={{Proyecto.imgP}} class="img-fluid img-proyecto " ></a> 
+            <td *ngIf="isLogged">
+              <button type="button" class="btn btn-default btn-circle btn-lg" style="background-color:#2fac2b;"  
+              routerLink="/editproyect/{{Proyecto.id}}">
+                  <i class="bi bi-pencil-fill"></i></button>
+          </td>
+          <td *ngIf="isLogged">
+              <button class="btn btn-default btn-circle btn-lg" style="background-color: #ac2b2b;" (click)="delete(Proyecto.id)">
+                  <i class="bi bi-trash-fill"></i></button>
+          </td> 
           </div>
         </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <h3>BackEnd de este Proyecto</h3>
-            </button>
-          </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-            <div class="accordion-body">
-              <strong>El Back del proyecto</strong>Decidi incluir el repositorio Git del back, debido a que por el momento no cuento con proyectos para mostrar
-              <a href="https://github.com/LucasEsca/Portfolio-BackEnd" role="button"><img src="/assets/back.svg" class="img-fluid img-proyecto" ></a>
-            </div>
-          </div>
-        </div>
-
-
-
+      </div>
+      </div>
+    </tr>
+  </tbody>
 
       <h1>Practicas</h1>
 
@@ -71,37 +73,35 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-</div>
+    </div>
 
 
-<h1>Proyectos Realizados/En Progreso</h1>
-<tr *ngFor="let Proyecto of proyect">
-<div class="accordion" id="accordionExample">
-    <div class="accordion-item ">
-      <h2 class="accordion-header">
-        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            <td>
-              <h3>{{Proyecto.nombreP}}</h3>
-            </td>
-          
-        </button>
-      </h2>
-      <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-        <div class="accordion-body">
-          <td>
-            <p>{{Proyecto.descripcionP}}</p>
-          </td>
-          <a href="https://github.com/LucasEsca/Portfolio-FrontEnd" role="button"><img src={{Proyecto.img}} class="img-fluid img-proyecto " ></a> 
-          <td *ngIf="isLogged">
-            <button type="button" class="btn btn-default btn-circle btn-lg" style="background-color:#2fac2b;"  routerLink="/proyect/{{Proyecto.id}}">
-                <i class="bi bi-pencil-fill"></i></button>
-        </td>
-        <td *ngIf="isLogged">
-            <button class="btn btn-default btn-circle btn-lg" style="background-color: #ac2b2b;" (click)="delete(Proyecto.id)">
-                <i class="bi bi-trash-fill"></i></button>
-        </td> 
+
+<!--<h1>Proyectos Realizados/En Progreso</h1>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item ">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <h3>FronEnd de este Proyecto</h3>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>El Front del proyecto</strong> Decidi incluir el repositorio Git del front, debido a que por el momento no cuento con proyectos para mostrar
+              <a href="https://github.com/LucasEsca/Portfolio-FrontEnd" role="button"><img src="/assets/fron.svg" class="img-fluid img-proyecto " ></a> 
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    </div>
-  </tr>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                <h3>BackEnd de este Proyecto</h3>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <strong>El Back del proyecto</strong>Decidi incluir el repositorio Git del back, debido a que por el momento no cuento con proyectos para mostrar
+              <a href="https://github.com/LucasEsca/Portfolio-BackEnd" role="button"><img src="/assets/back.svg" class="img-fluid img-proyecto" ></a>
+            </div>
+          </div>
+        </div>-->
