@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -34,6 +35,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { NewproyectoComponent } from './components/proyecto/newproyecto.component';
 import { EditproyectoComponent } from './components/proyecto/editproyecto.component';
+import { Err404Component } from './components/err404/err404.component';
 
 
 
@@ -62,6 +64,7 @@ import { EditproyectoComponent } from './components/proyecto/editproyecto.compon
     RegistroComponent,
     NewproyectoComponent,
     EditproyectoComponent,
+    Err404Component,
     
     
     
@@ -77,6 +80,7 @@ import { EditproyectoComponent } from './components/proyecto/editproyecto.compon
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage()),
     FontAwesomeModule,
+    MatProgressBarModule,
     
   ],
   providers: [

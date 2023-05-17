@@ -5,8 +5,10 @@
         box-shadow: 3px 3px 6px gray;
 }
 .background{
-    background-image: url("/assets/pers.svg");
+    background: linear-gradient(to right, #5de0e6, #004aad);
 }
 .card{
-    opacity: 0.8;
+
+    background-image: url("/assets/Persona.svg");
+    background-size: cover;
 }

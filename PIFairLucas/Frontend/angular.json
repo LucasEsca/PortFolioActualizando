@@ -25,6 +25,7 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom-theme.scss",
               "src/styles.css",
               "C:/Users/Usuario/Curso programacion/ArgProg/ProyectoIntegradorFairLucas/PIFairLucas/Frontend/node_modules/bootstrap/dist/css/bootstrap.css"
             ],

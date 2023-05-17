@@ -1,7 +1,8 @@
 .background{
-    background-image: url("/assets/hys.svg");
-    background-size: cover;
+    background: linear-gradient(to right, #5de0e6, #004aad);
+
 }
 .card{
-    opacity: 0.8;
+    background-image: url("/assets/Skill.svg");
+    background-size: cover;
 }

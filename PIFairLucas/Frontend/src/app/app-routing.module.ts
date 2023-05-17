@@ -13,6 +13,7 @@ import { InicioComponent } from './components/inicio/inicio.component';
 import { RegistroComponent } from './components/registro/registro.component';
 import { EditproyectoComponent } from './components/proyecto/editproyecto.component';
 import { NewproyectoComponent } from './components/proyecto/newproyecto.component';
+import { Err404Component } from './components/err404/err404.component';
 
 const routes: Routes = [
   {path:'', component: InicioComponent},
@@ -27,7 +28,9 @@ const routes: Routes = [
   { path: 'editskill/:id', component: EditSkillComponent},
   { path: 'editacercade/:id', component: EditAcercaDeComponent },
   {path: 'editproyect/:id', component: EditproyectoComponent},
-  {path: 'newproyect', component: NewproyectoComponent}
+  {path: 'newproyect', component: NewproyectoComponent},
+  {path: 'error', component: Err404Component},
+  {path: '**', redirectTo: 'error'},
 
 ];
 
