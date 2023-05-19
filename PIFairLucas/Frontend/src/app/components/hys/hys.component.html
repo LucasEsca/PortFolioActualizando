@@ -1,40 +1,49 @@
 <div class="row">
 
-    <h1>Hard & Soft skills</h1>
-    <div class="col-lg-2">
-        <button class="btn btn-default btn-circle btn-lg" style="background-color: #2fac2b;"  routerLink="/newskill" *ngIf="isLogged">
-            <i class="bi bi-folder-plus"></i>
-        </button>
-    </div>
-
-
+    <h1>Hard & Soft skills         <button class="btn btn-default btn-circle btn-lg" style="background-color: #2fac2b; margin: 5px;"  routerLink="/newskill" *ngIf="isLogged">
+        <i class="bi bi-folder-plus"></i>
+    </button></h1>
+    
     <div class="text-center col-sm-4 col-md-4 col-lg-4 circulo" *ngFor="let skill of skill">
         <circle-progress 
         [percent]="(skill.porcentaje)" 
         [radius]="90" [imageSrc]="''" 
         [title]="(skill.nombre)"
-        [titleColor]="'#444444'"
+        [titleColor]="'#000000'"
         [showTitle]="true" 
-        [showImage]="false" 
+        [showSubtitle]="true"
+        [showImage]="false"
+        [showBackground]="true" 
         [imageHeight]="70" 
         [imageWidth]="70" 
-        [showUnits]="false"
+        [showUnits]="true"
         [lazy]="true"
-        [unitsColor] = "'#444444'"
-        [showSubtitle]="false" 
-        [subtitleColor] = "'#A9A9A9'"
+        [unitsColor] = "'#000000'" 
+        [subtitleColor] = "'#000000'"
         [space] = "-10"
         [radius]="60"
-        [backgroundPadding]="5"
-        [outerStrokeGradientStopColor]="'#53a9ff'"
-        [showInnerStroke]="true"
+        [backgroundPadding]="-10"
+        [backgroundGradient]="true"
+        [backgroundOpacity]="1"
+        [backgroundColor]="'#5de0e6'"
+        [backgroundGradientStopColor]="'#8c52ff'"
+        [backgroundStroke]="'transparent'"
+        [outerStrokeColor]="'#ffffff'"
+        [outerStrokeGradientStopColor]="'transparent'"
+        [showInnerStroke]="false"
+        [clockwise]="true"
+        [showInnerStroke]="false"
+        [responsive]="false"
+        [startFromZero]="false"
         [showZeroOuterStroke]="true"
         [outerStrokeWidth]="10" 
-        [innerStrokeWidth]="10" 
-        [outerStrokeColor]="'#4882c2'"
-        [innerStrokeColor]="'#e7e8ea'" 
+        [space]="4"
+        [innerStrokeWidth]="0" 
+        [backgroundStrokeWidth]="0"
+        [innerStrokeColor]="'#000000'" 
         [animation]="true" 
-        [animationDuration]="600"
+        [animateTitle]="true"
+        [animationDuration]="500"
         [outerStrokeGradient]="true"
         >
         
