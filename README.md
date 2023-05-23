@@ -2,12 +2,15 @@
 
 It's a website where I document my knowledge and skills in a practical way, for the moment it's only in Spanish.
 
+I consider it special, being my first project, in this one I can have free decision on what to do and experiment without generating problems. 
+
 
 ## Additional Information
 
 The project was developed with Angular and Java, as a final test of a course, this version is more advanced, applying knowledge of the course in a deeper way. It's a version in constant development. 
 The page's layout implements Bootstrap with some CSS. 
 The creation and implementation of models and services uses TypeScript.
+For the logic and definition of models, services and controllers uses Java
 Logic and definition of models, services and controllers utilices Java. Clevercloud, for data storage, firebase for image storage, render and firebase for hosting.
 
 ## Environment Variables
@@ -16,7 +19,7 @@ It has variables to change the environment, from local to external, to test chan
 
 APIS for the BackEnd:
 - Local:` URL:http://localhost:8080/`
--  External:` URL:https://backendfl1.onrender.com/`
+- External:` URL:https://backendfl1.onrender.com/`
 
 FrontEnd changes are only applied, if there's a deploy on the firebase.
 
@@ -41,6 +44,7 @@ This new version features:
 - Button to download CV
 - Improved "Acerca de" section
 - Updated buttons 
+
 These improvements/changes are not tested for mobile versions. The images of the change in the "Proyectos" section are not tested for firebase storage.
 
 ## Future Optimizations
@@ -49,6 +53,7 @@ These improvements/changes are not tested for mobile versions. The images of the
 - Add English visualization
 - Make the "Practicas" section updatable
 - Improve layouts
+- Optimization of the sections when creating or editing
 - Use comments section for improvement
 
 Improvements may vary as you learn along the way.
