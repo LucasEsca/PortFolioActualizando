@@ -17,7 +17,7 @@ It has variables to change the environment, from local to external, to test chan
 
 APIS for the BackEnd:
 - Local:` URL:http://localhost:8080/`
--  External:` URL: 'https://backendfl1.onrender.com/'`
+-  External:` URL:https://backendfl1.onrender.com/`
 
 FrontEnd changes are only applied, when a deploy is applied, on the firebase.
 
