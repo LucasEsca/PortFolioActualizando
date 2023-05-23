@@ -50,6 +50,7 @@ These improvements/changes are not tested for mobile versions. The images of the
 - Make the "Practicas" section updatable
 - Improve layouts
 - Use comments section for improvement
+
 Improvements may vary as you learn along the way.
 
 
