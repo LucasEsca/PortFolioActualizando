@@ -1,4 +1,4 @@
-# Actualizing Personal Portfolio
+# Updating Personal Portfolio
 
 It is a website where I document my knowledge and skills in a practical way, for the moment it is only in Spanish.
 
